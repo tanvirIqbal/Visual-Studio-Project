@@ -253,3 +253,10 @@ paket-files/
 /TestWebApplication1
 /PracticeCSharp
 /Vidly
+*.zip
+/ThreeTierStructure
+/ThreeTier
+/ConsignmentShop
+/CustomerDataEntry
+/Ease35Demo
+/SimpleDatabaseConnection
