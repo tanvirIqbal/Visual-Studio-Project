@@ -53,6 +53,14 @@ namespace ProjectTransfer
 
                 throw;
             }
+            finally
+            {
+                //check if connection is still open then attempt to close it
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
             //this.reportViewer1.RefreshReport();
         }
         void SubreportProcessingEventHandler(object sender,SubreportProcessingEventArgs e)
