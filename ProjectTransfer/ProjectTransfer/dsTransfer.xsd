@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsTransfer" targetNamespace="http://tempuri.org/dsTransfer.xsd" xmlns:mstns="http://tempuri.org/dsTransfer.xsd" xmlns="http://tempuri.org/dsTransfer.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsTransfer" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTransfer" msprop:Generator_UserDSName="dsTransfer">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsTransferHeader" msprop:Generator_TableClassName="dsTransferHeaderDataTable" msprop:Generator_TableVarName="tabledsTransferHeader" msprop:Generator_TablePropName="dsTransferHeader" msprop:Generator_RowDeletingName="dsTransferHeaderRowDeleting" msprop:Generator_RowChangingName="dsTransferHeaderRowChanging" msprop:Generator_RowEvHandlerName="dsTransferHeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="dsTransferHeaderRowDeleted" msprop:Generator_UserTableName="dsTransferHeader" msprop:Generator_RowChangedName="dsTransferHeaderRowChanged" msprop:Generator_RowEvArgName="dsTransferHeaderRowChangeEvent" msprop:Generator_RowClassName="dsTransferHeaderRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransferID" msprop:Generator_ColumnVarNameInTable="columnTransferID" msprop:Generator_ColumnPropNameInRow="TransferID" msprop:Generator_ColumnPropNameInTable="TransferIDColumn" msprop:Generator_UserColumnName="TransferID" type="xs:string" minOccurs="0" />
+              <xs:element name="DateOfTransfer" msprop:Generator_ColumnVarNameInTable="columnDateOfTransfer" msprop:Generator_ColumnPropNameInRow="DateOfTransfer" msprop:Generator_ColumnPropNameInTable="DateOfTransferColumn" msprop:Generator_UserColumnName="DateOfTransfer" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FromBranch" msprop:Generator_ColumnVarNameInTable="columnFromBranch" msprop:Generator_ColumnPropNameInRow="FromBranch" msprop:Generator_ColumnPropNameInTable="FromBranchColumn" msprop:Generator_UserColumnName="FromBranch" type="xs:string" minOccurs="0" />
+              <xs:element name="ToBranch" msprop:Generator_ColumnVarNameInTable="columnToBranch" msprop:Generator_ColumnPropNameInRow="ToBranch" msprop:Generator_ColumnPropNameInTable="ToBranchColumn" msprop:Generator_UserColumnName="ToBranch" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsTransferDetail" msprop:Generator_TableClassName="dsTransferDetailDataTable" msprop:Generator_TableVarName="tabledsTransferDetail" msprop:Generator_TablePropName="dsTransferDetail" msprop:Generator_RowDeletingName="dsTransferDetailRowDeleting" msprop:Generator_RowChangingName="dsTransferDetailRowChanging" msprop:Generator_RowEvHandlerName="dsTransferDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="dsTransferDetailRowDeleted" msprop:Generator_UserTableName="dsTransferDetail" msprop:Generator_RowChangedName="dsTransferDetailRowChanged" msprop:Generator_RowEvArgName="dsTransferDetailRowChangeEvent" msprop:Generator_RowClassName="dsTransferDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransferID" msprop:Generator_ColumnVarNameInTable="columnTransferID" msprop:Generator_ColumnPropNameInRow="TransferID" msprop:Generator_ColumnPropNameInTable="TransferIDColumn" msprop:Generator_UserColumnName="TransferID" type="xs:string" minOccurs="0" />
+              <xs:element name="ProductID" msprop:Generator_ColumnVarNameInTable="columnProductID" msprop:Generator_ColumnPropNameInRow="ProductID" msprop:Generator_ColumnPropNameInTable="ProductIDColumn" msprop:Generator_UserColumnName="ProductID" type="xs:string" minOccurs="0" />
+              <xs:element name="ProductName" msprop:Generator_ColumnVarNameInTable="columnProductName" msprop:Generator_ColumnPropNameInRow="ProductName" msprop:Generator_ColumnPropNameInTable="ProductNameColumn" msprop:Generator_UserColumnName="ProductName" type="xs:string" minOccurs="0" />
+              <xs:element name="UnitQuantity" msprop:Generator_ColumnVarNameInTable="columnUnitQuantity" msprop:Generator_ColumnPropNameInRow="UnitQuantity" msprop:Generator_ColumnPropNameInTable="UnitQuantityColumn" msprop:Generator_UserColumnName="UnitQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="UnitCost" msprop:Generator_ColumnVarNameInTable="columnUnitCost" msprop:Generator_ColumnPropNameInRow="UnitCost" msprop:Generator_ColumnPropNameInTable="UnitCostColumn" msprop:Generator_UserColumnName="UnitCost" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
