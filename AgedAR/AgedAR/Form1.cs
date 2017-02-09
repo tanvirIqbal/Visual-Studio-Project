@@ -21,20 +21,24 @@ namespace AgedAR
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //string connectionString = @"Data Source=CEL60;Initial Catalog=StudentDB;User ID=sa";
-            //SqlConnection connection = new SqlConnection(connectionString);
-            //string sql = "Select * FROM dbo.DivisionSales";
-            //SqlCommand command = new SqlCommand(sql, connection);
+            string connectionString = @"Data Source=CEL60;Initial Catalog=StudentDB;User ID=sa";
+            SqlConnection connection = new SqlConnection(connectionString);
+            string sql = @"select a.InvoiceNo, ac.CustomerName, a.Amount, a.InvoiceAge 
+                                    from AgedAR a
+                                    Left join AgedARCustomer ac
+                                    on a.CustomerID = ac.CustomerID
+                                    ORDER BY ac.CustomerName, a.InvoiceNo";
+            SqlCommand command = new SqlCommand(sql, connection);
             DataSet ds = new dsAgedAR();
-            //SqlDataReader dr;
+            SqlDataReader dr;
 
             try
             {
-                //connection.Open();
-                //dr = command.ExecuteReader();
-                //ds.Tables[0].Load(dr);
-                //dr.Close();
-                //connection.Close();
+                connection.Open();
+                dr = command.ExecuteReader();
+                ds.Tables[0].Load(dr);
+                dr.Close();
+                connection.Close();
 
                 //provide local report information to viewer
                 reportViewer1.LocalReport.ReportEmbeddedResource = "AgedAR.rptAgedAR.rdlc";
@@ -54,10 +58,10 @@ namespace AgedAR
             finally
             {
                 //check if connection is still open then attempt to close it
-                //if (connection.State == ConnectionState.Open)
-                //{
-                //    connection.Close();
-                //}
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
             }
             this.reportViewer1.RefreshReport();
         }
