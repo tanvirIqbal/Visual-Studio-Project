@@ -1,2 +1,2 @@
 # Visual-Studio-Project
-All my visual studio works go here
+My visual studio practices live here
